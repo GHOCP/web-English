@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>English Accumulation</title>
+	
+	<style>
+		body {
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+		}
+
+		.my-Body {
+			display: grid;
+			padding: 0;
+			margin: 0;
+			grid-gap: 2em;
+			grid-template-columns: 1fr 1fr 9fr;
+		}
+
+		nav {
+			border-right: 1px solid red;
+			height: 100vh;
+			position: sticky;
+			top: 0;
+			left: 0;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+
+		nav li {
+			margin-top: 10em;
+		}
+
+		aside {
+			margin-top: 10em;
+			position: -webkit-sticky;
+			position: sticky;
+			align-self: start;
+			top: 52px;
+			left: 0;
+		}
+
+		article h1 {
+			margin-top: 10em;
+		}
+		
+		.a {
+			background-color: aqua;
+		}
+
+		.selectd {
+			background-color: #8a2be2;
+		}
+
+		.controls ul {
+			list-style: none;
+			padding: 0;
+			position: relative;
+		}
+
+
+		.controls ul li {
+			border: 1px solid #000000;
+			text-align: center;
+			padding-top: 4%;
+			padding-bottom: 4%;
+			margin-top: 0;
+			margin-bottom: 0;;
+			box-sizing: border-box;
+			height: 30%;
+		}
+		/*
+		.controls li a {
+			display: block;
+		}
+		
+		aside div {
+			position: -webkit-sticky;
+			position: sticky;
+			align-self: flex-start;
+			top: 50px;
+			left: 0;
+		}
+    */
+		#box {
+			background-color: #888888;
+			border-right: 3px solid #000000;
+			/*position: relative;*/
+			position: absolute;
+			width: 102%;
+			height: 33%;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transition: 0.2s;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<div class="my-Body">
+		<!-- navigation -->
+		<nav>
+			<div class="navigation">
+				<ul>
+					<li>navigation</li>
+					<li>navigation</li>
+					<li>navigation</li>
+					<li>navigation</li>
+					<li>navigation</li>
+					<li>navigation</li>
+					<li>navigation</li>
+					<li>navigation</li>
+					<li>navigation</li>
+					<li>navigation</li>
+					<li>navigation</li>
+				</ul>
+			</div>
+		</nav>
+
+			<!-- aside -->
+		<aside>
+			<div class="controls">
+				<ul>
+					<li id="box">&nbsp;</li>
+					<li>aside1</li>
+					<li>aside2</li>
+					<li>aside3</li>
+				</ul>
+				
+			</div>
+			<div id="output">
+				y=
+			</div>
+		</aside>
+			<!-- article -->
+		<main>
+			<article>
+				<div id="example"></div>
+				<h1 class="a" id="a">a</h1>
+				<h1>b</h1>
+				<h1>c</h1>
+				<h1>d</h1>
+				<h1>e</h1>
+				<h1>f</h1>
+				<h1>g</h1>
+				<h1>h</h1>
+				<h1>i</h1>
+			</article>
+		</main>
+	</div>
+	
+<script>
+	const elem = document.getElementById("a");
+	const box = document.getElementById("box");
+
+	function update() {
+		const container = document.getElementById("output");
+
+		const rect = elem.getBoundingClientRect();
+		container.innerHTML = '';
+		let para = document.createElement('p');
+		let para1= document.createElement('p');
+		// para.textContent = rect.top;
+		para.textContent = window.scrollY;
+		para1.textContent = rect.top;
+		// container.appendChild(para);
+		// container.appendChild(para1);
+		if (window.scrollY > rect.top - 20) {
+			elem.classList.toggle("selectd");
+			box.style.top = "33%";
+		}
+		else {
+			box.style.top = "0";
+		}
+		
+		/*
+		if (window.scrollY > rect.top - 20) {
+			elem.style.backgroundColor = "#8a2be2";
+		}
+		else {
+			elem.style.backgroundColor = "red";
+		}
+		*/
+	}
+
+document.addEventListener('scroll', update);
+update();
+
+</script>
+</body>
+
+</html>
+
