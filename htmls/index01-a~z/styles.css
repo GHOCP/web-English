@@ -19,7 +19,7 @@ body {
 	padding: 0;
 	margin: 0;
 	grid-gap: 2em;
-	grid-template-columns: 1.2fr 0.8fr 9fr;
+	grid-template-columns: 1.2fr 0.8fr 8fr;
 }
 
 a {
@@ -317,6 +317,7 @@ article h1 {
 
 #content {
 	padding: 3em;
+	padding-left: 1em;
 }
 
 table {
