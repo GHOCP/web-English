@@ -213,11 +213,22 @@ aside {
 
 aside ul {
 	padding: 0;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	position: relative;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 90%;
+}
+/*
+aside ul {
+	padding: 0;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	position: relative;
 	height: 100%;
 }
+*/
 
 aside ul li {
 	box-sizing: border-box;
@@ -231,6 +242,7 @@ aside ul li {
 }
 
 aside ul li a {
+	font-size: 0.5em;
 	display: block; 
 	height: auto; 
 	color:  #9F9F9F;
