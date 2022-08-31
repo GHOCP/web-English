@@ -18,8 +18,8 @@ body {
 	display: grid;
 	padding: 0;
 	margin: 0;
-	grid-gap: 2em;
-	grid-template-columns: 1.3fr 0.7fr 8fr;
+	grid-gap: 1em;
+	grid-template-columns: 1fr 5rem 8fr;
 }
 
 a {
@@ -246,8 +246,8 @@ ul::-webkit-scrollbar {
 }
 
 ul::-webkit-scrollbar-thumb {
-	background: #888;
-	border-radius: 10px;
+	background-color: #D0D0D0;
+	border-radius: 0px;
 }
 
 ul::-webkit-scrollbar-track {

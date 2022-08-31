@@ -10,4 +10,4 @@
 - before coding: draw a wireframe of the webpage, with hierarchies of structured elements displayed. 
 
 - shadow effects: multiple shadow
-- 
+- grid-template-columns: 1fr 7rem 8fr;
