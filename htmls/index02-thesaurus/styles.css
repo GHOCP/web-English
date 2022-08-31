@@ -2,11 +2,11 @@
 @charset "utf-8";
 
 /* ----------------- CSS body and basic style ----------------- */
-/*
+
 html {
 	scroll-behavior: smooth;
 }
-*/
+
 body {
 	margin: 0;
 	padding: 0;
@@ -19,7 +19,7 @@ body {
 	padding: 0;
 	margin: 0;
 	grid-gap: 1em;
-	grid-template-columns: 1fr 6rem 8fr;
+	grid-template-columns: 1fr 5rem 8fr;
 }
 
 a {
@@ -209,6 +209,27 @@ aside {
 	left: 0;
 }
 
+article #top {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	width: 12%;
+	height: 2%;
+	text-align: center;
+	padding: 10px;
+	background-color: rgb(0, 0, 0);
+	border-radius: 0 0 1em 1em;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+article #title {
+	color: #FFFFFF;
+	font-size: 0.8em;
+	font-style: italic;
+	font-weight: bold;
+	font-family:'Times New Roman', Times, serif;
+}
+
 aside ul {
 	padding: 0;
 	margin-top: 1em;
@@ -218,6 +239,7 @@ aside ul {
 	overflow-x: hidden;
 	height: 90%;
 }
+
 
 ul::-webkit-scrollbar {
   background-color: white;
@@ -285,8 +307,29 @@ article {
 }
 
 article h1 {
-	font-size: 0.7em;
+	font-size: 1.5em;
+	border-bottom: 1px solid #EAEAEA;
+	padding-bottom: 0.5em;
+	margin-top: 3em;
+}
+
+article h1:nth-child(1) {
+	margin-top: 0.7em;
+}
+
+article h2 {
+	font-size: 1em;
 	margin-top: 2em;
+}
+
+article ul {
+	list-style: initial;
+}
+
+article li {
+	line-height: 0.5em;
+	margin-bottom: 1.2em;
+	font-size: 0.7em;
 }
 
 #content {
@@ -296,20 +339,21 @@ article h1 {
 
 table {
 	border-collapse: collapse;
+	width: 100%;
 }
 
 table, th, td {
   border: 1px solid #EAEAEA;
-	width: 70vw;
 }
 
 td {
-	font-size: 0.5em;
+	font-size: 0.65em;
 	padding: 1em;
+	line-height: 1.5em;
 }
 
 th {
-	text-align: left;
+	text-align: center;
 	font-size: 0.5em;
 	padding-left: 1%;
 }
@@ -320,8 +364,17 @@ tbody tr:nth-child(even) {
 
 tbody tr td:nth-child(odd) {
 	font-weight: bold;
-	width: 5%;
 }
 
+tbody tr td:nth-child(even) {
+	font-size: 0.5em;
+}
 
+/*
+tbody tr.with-IMG td:nth-child(1),
+tbody tr.with-IMG td:nth-child(4),
+tbody tr.with-IMG td:nth-child(7) {
+	font-weight: bold;
+	width: 5%;
+}
 
