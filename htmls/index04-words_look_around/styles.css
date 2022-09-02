@@ -282,8 +282,9 @@ aside #box {
 
 article {
 	height: auto;
+	margin-bottom: 10em;
 	font-size: 0.7em;
-	width: 80%;
+	width: 90%;
 }
 
 article h1 {
@@ -317,7 +318,8 @@ article li {
 }
 
 article p {
-	line-height: 1.5em;
+	font-size: 1em;
+	line-height: 1.6em;
 }
 
 .description {
