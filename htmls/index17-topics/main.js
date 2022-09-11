@@ -1,7 +1,8 @@
 /*jshint esversion: 6 */
 "use strict";
 
-const asideList = document.getElementById('aside').getElementsByTagName('a');
+/* const asideList = document.getElementById('aside').getElementsByTagName('a'); */
+const asideList = document.getElementsByClassName("sub");
 const titleList = document.getElementById('content').getElementsByTagName('h1');
 const winHeight = window.innerHeight;
 const total = asideList.length;	// total === 18;
@@ -75,7 +76,7 @@ for (let i = 0; i < total; i++) {
 		asideList[i].onmouseleave = function(e) {
 			e.target.style.color = '#000000';
 		};
-		
+
 		for (let j = 0; j < total; j++) {
 			if (j !== selectedIndex) {
 				asideList[j].onmouseover = function() {
@@ -86,6 +87,7 @@ for (let i = 0; i < total; i++) {
 				};
 			}
 		}
+
 	};		
 }
 
