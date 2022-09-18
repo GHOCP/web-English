@@ -91,9 +91,7 @@ for (let i = 0; i < total; i++) {
 	};		
 }
 
-
-
-
+/*
 function update() {
 	const rectArray = [];
 	for (let i = 0; i < total; i++) {
@@ -110,3 +108,4 @@ function update() {
 
 document.addEventListener('scroll', update);
 update();
+*/

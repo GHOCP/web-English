@@ -259,7 +259,7 @@ ul::-webkit-scrollbar-track {
 aside ul li {
 	box-sizing: border-box;
 	width: 100%;
-	height: 25px;
+	height: 1.1em;
 	font-family: Arial;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -273,10 +273,21 @@ aside ul li a {
 	color:  #C6C6C6;
 	text-align: right;
 	padding-right: 15px;
-	padding-top: 0.8em;
-	padding-bottom: 0.8em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
+aside ul li:nth-child(2) {
+	margin-top: 0.5em;
 }
 
+aside .aside_h1 {
+	font-weight: bold;
+	font-size: 0.7em;
+	color: #000000;
+	margin-top: 1em;
+}
+
+/*
 aside ul a:hover {
 	color: #8D8D8D;
 }
@@ -284,6 +295,7 @@ aside ul a:hover {
 aside ul li:first-child a {
 	color: #000000;
 }
+*/
 
 /*
 aside #box {
@@ -307,6 +319,7 @@ article {
 }
 
 article h1 {
+	font-size: 1.8em;
 	border-bottom: 1px solid #EAEAEA;
 	padding-bottom: 0.5em;
 	margin-top: 2em;
@@ -318,7 +331,7 @@ article h1:nth-child(1) {
 
 article h2 {
 	font-size: 1em;
-	margin-top: 2em;
+	margin-top: 1.5em;
 }
 
 article ul {

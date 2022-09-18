@@ -77,7 +77,9 @@ update();
 /*jshint esversion: 6 */
 "use strict";
 
-const asideList = document.getElementById('aside').getElementsByTagName('a');
+/*const asideList = document.getElementById('aside').getElementsByTagName('a');*/
+
+const asideList = document.getElementsByClassName("sub");
 const titleList = document.getElementById('content').getElementsByTagName('h1');
 const winHeight = window.innerHeight;
 const total = asideList.length;	// total === 18;
